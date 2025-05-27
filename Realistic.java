@@ -37,6 +37,12 @@ public class Realistic {
          * smallest element. The first loop copies all the elements before the smallest
          * element and the second loop the elements after it.
          */
+       // HW Part 1
+       /*The first loop count starts at 0 and will increase by 1 every time the loop runs. The loop will continue while the current element index is positioned before the 
+       smallest index location. These elements will be stored in the temp array excluding the smallest number.
+       
+       The second loop starts at the next index position (on the right side) of the smallest index. The loop will continue to run if it is within bounds of the array.
+       Everything to the right of the smallest element will be stored in the temp array, shifting one index before its original location, after the smallest element has been removed.*/
         for (int i = 0; i < smallest_index; i++) {
             temporary[i] = arr[i];
         }
