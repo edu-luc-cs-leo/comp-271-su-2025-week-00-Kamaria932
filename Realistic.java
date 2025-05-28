@@ -65,7 +65,22 @@ public class Realistic {
 
         arr = temporary; // array shorted by 1 (removing smallest elem)
         return result; // smallest element
+        
     } // method getSmallest
+
+    //HW PT2
+    public static void add(int value){ //beign with this header for the add method
+    int[] increase = new int[arr.length + 1]; //create a new array with one more element to the original array length.
+
+    for (int i = 0; i < arr.length; i++) { //loop counter starts at 0 and will increase by 1 every time the loop runs. The loop will continue to run if it is within bounds of the array.
+            increase[i] = arr[i];//Store the elements from the original array into the new array.
+        }// end of for loop
+
+     increase[increase.length-1] = value;  // give a value to the new added element and place it at the end of the array. 
+
+
+     arr = increase; //Array is larger, showing the added element at the end.
+    } // end of increase element method
 
     /** Driver/simple test code */
     public static void main(String[] args) {
@@ -74,5 +89,9 @@ public class Realistic {
         System.out.printf("\nSmallest element found: %d", getSmallest());
         System.out.printf("\nArray after removal of smallest element: %s\n\n",
                 Arrays.toString(arr));
+                add (22); //Add the number 22 to the array it should appear at the end.
+        System.out.printf("\nArray after adding an element: %s\n\n",
+                Arrays.toString(arr));
     } // method main
+
 } // class Realistic
